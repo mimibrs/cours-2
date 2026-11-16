@@ -1,0 +1,67 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #14161c;
+  font-family: Arial, Helvetica, sans-serif;
+}
+/*réglage de l'apparence de la page principale*/ 
+#cadre {
+  position: relative;
+  width: min(960px, 100vw);
+}
+
+#jeu {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: #000;
+  cursor: crosshair;
+}
+
+#ecran {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 24px;
+  text-align: center;
+  color: #fff;
+  background: rgba(10, 14, 30, 0.82);
+}
+
+#ecran h1 {
+  margin: 0;
+  font-size: clamp(28px, 6vw, 56px);
+  letter-spacing: 2px;
+}
+
+#ecran p {
+  margin: 0;
+  max-width: 460px;
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+#ecran.cache { display: none; }
+
+#ecran button {
+  padding: 12px 36px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  background: #1f4fd8;
+  border: 3px solid #fff;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#ecran button:hover { background: #2d63ff; }
+#ecran button:focus-visible { outline: 3px solid #ffd400; outline-offset: 3px; }
